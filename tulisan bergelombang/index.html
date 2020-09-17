@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body {
+            background: black;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        .content {
+            width: 400px;
+            height: 400px;
+            margin: auto;
+            position: relative;
+        }
+        
+        .content h2 {
+            position: absolute;
+            color: white;
+            font-size: 100px;
+        }
+        
+        .content h2:nth-child(1) {
+            color: transparent;
+            -webkit-text-stroke: 2px blue;
+        }
+        
+        .content h2:nth-child(2) {
+            color: rgb(107, 107, 250);
+            -webkit-text-stroke: 2px;
+            animation: animate 4s ease-in-out infinite;
+        }
+        
+        @keyframes animate {
+            0%,
+            100% {
+                clip-path: polygon(37% 78%, 75% 67%, 100% 65%, 100% 100%, 70% 100%, 30% 100%, 0 100%, 1% 78%);
+            }
+            50% {
+                clip-path: polygon(39% 45%, 76% 40%, 100% 30%, 100% 100%, 70% 100%, 30% 100%, 0 100%, 0 69%);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="content">
+        <h2>WATER </h2>
+        <h2>WATER</h2>
+
+    </div>
+
+
+</body>
+
+</html>
